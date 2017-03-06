@@ -28,7 +28,7 @@ if($_GET["comand"] == "create")
 		
 	}
 }
-if($_GET["comand"] == "delete")
+if($_GET["comand"] == "delete_all")
 {
 	$query = "DELETE FROM data";
 	$result = pg_query($query) or die(pg_last_error());	
