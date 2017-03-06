@@ -106,7 +106,7 @@ if(isset($_POST["button"]))
 				margin: 5px;
 				text-align: center;
 				     font-family: Arial, Helvetica, sans-serif;
-				font-size: 10px;
+				font-size: 14px;
 				line-height: 20px;
 				  font-weight: 400;
 				  color: #3b3b3b;
@@ -155,7 +155,7 @@ if(isset($_POST["button"]))
 				$result = pg_query($query) or die(pg_last_error());
 				while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 				{
-					echo '<tr style = ""><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+					echo '<tr style = "margin-top: 3px; font-size: 10px; border: 1px solid black;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 				}
 			?>	
 		</table>
