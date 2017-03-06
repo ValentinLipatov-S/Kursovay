@@ -161,7 +161,6 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 					{
 						echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
-						break;
 					}
 				}	
 			?>	
