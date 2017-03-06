@@ -112,7 +112,6 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			}
 			input
 			{
-				font-size: 14px;
 				border: 1px solid black;
 				height: 40px;
 				padding: 5px;
@@ -155,7 +154,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
 			</tr>
 			<?php
-				$query = "SELECT * FROM data ORDER BY id ASC";
+				$query = "SELECT * FROM data ORDER BY id";
 				$result = pg_query($query) or die(pg_last_error());
 				while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 				{
