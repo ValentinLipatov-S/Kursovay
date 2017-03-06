@@ -121,12 +121,9 @@ if(isset($_POST["button"]))
 			input[type = "submit"]
 			{
 				border: 0px;
-				border-top: 1px solid black;
-				border-right: 1px solid black;
-				
 				color: #fff; /* цвет текста */
 				cursor: pointer;
-			    text-decoration: none; /* убирать подчёркивание у ссылок */
+			   	text-decoration: none; /* убирать подчёркивание у ссылок */
 				user-select: none; /* убирать выделение текста */
 				background: rgb(212,75,56); /* фон кнопки */
 				padding: .7em 1.5em; /* отступ от текста */
