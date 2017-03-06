@@ -17,7 +17,7 @@ if($_GET["comand"] == "create")
 	try 
 	{  
 		$query = "CREATE TABLE data (
-		id TEXT NOT NULL,
+		id INT,
 		name TEXT NOT NULL,
 		text TEXT NOT NULL)";
 		$result = pg_query($query) or die(pg_last_error());
