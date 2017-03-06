@@ -27,6 +27,14 @@ if($_GET["comand"] == "create")
 	{
 		echo "<script>alert('Ошибка создания базы данных');</script>";
 	}
+}
+if($_GET["comand"] == "delete")
+{
+	$query = "DELETE FROM data";
+	$result = pg_query($query) or die(pg_last_error());
+}
+if($_GET["comand"] == "write")
+{
 	for($i = 1; $i <= 30; $i++)
 	{
 		switch($i)
