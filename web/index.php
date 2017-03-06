@@ -81,8 +81,6 @@ if(isset($_POST["button"]))
 	}
 	$result = pg_query($query) or die(pg_last_error());
 }
-pg_free_result($result);
-pg_close($dbconn);
 ?>
 <html>
 	<head>
@@ -143,7 +141,14 @@ pg_close($dbconn);
 		
 		<table>
 			<th>Номер</th><th>Название темы</th><th>Фамилия</th>
-				
+			<?php
+				$query = "SELECT * FROM data";
+				$result = pg_query($query) or die(pg_last_error());
+				while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
+				{
+					echo '<tr style = ""><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+				}
+			?>	
 		</table>
 		
 		<form method="post" style = "text-align: left;">
@@ -152,3 +157,7 @@ pg_close($dbconn);
 		</div>
 	</body>
 </html>
+<?php 
+pg_free_result($result);
+pg_close($dbconn);
+?>
