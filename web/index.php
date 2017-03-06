@@ -154,12 +154,16 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
 			</tr>
 			<?php
-				$query = "SELECT * FROM data ORDER BY 1";
-				$result = pg_query($query) or die(pg_last_error());
-				while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
+				for($i = 1; $i <= 30; $i++)
 				{
-					echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
-				}
+					$query = "SELECT * FROM data WHERE id = '$i'";
+					$result = pg_query($query) or die(pg_last_error());
+					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
+					{
+						echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+						break;
+					}
+				}	
 			?>	
 		</table>
 
