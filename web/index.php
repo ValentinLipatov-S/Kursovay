@@ -106,7 +106,7 @@ if(isset($_POST["button"]))
 				margin: 5px;
 				text-align: center;
 				     font-family: Arial, Helvetica, sans-serif;
-				font-size: 14px;
+				font-size: 10px;
 				line-height: 20px;
 				  font-weight: 400;
 				  color: #3b3b3b;
