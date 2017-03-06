@@ -142,7 +142,7 @@ if(isset($_POST["button"]))
 	<body>
 		<div class = "container">
 		
-		<h1 style = "margin-top: 20px;">СПКсп-114</h1>
+		<h1 style = "margin-top: 20px;">ПКсп-114</h1>
 			
 		<form method="post" style = "text-align: left; margin: 0px;">
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%; border-left: 1px solid white;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
