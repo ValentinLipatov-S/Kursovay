@@ -96,8 +96,8 @@ if(isset($_POST["button"]))
 		<title>Задания на курсовую работу</title>
 		<link rel="SHORTCUT ICON" href="icon.ico" type="image/x-icon">
 		<style type="text/css">
-			TABLE {width: 100%; /* Ширина таблицы */ /* Рамка вокруг таблицы */}
-			TD, TH {padding: 5px;  /* Поля вокруг содержимого ячеек */}
+			TABLE {width: 100%;  border: 1px solid black; /* Ширина таблицы */ /* Рамка вокруг таблицы */}
+			TD, TH {padding: 5px;  border: 1px solid black;   /* Поля вокруг содержимого ячеек */}
 			TH { height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #d9e0e7; font-weight: normal;}
 		</style>
 		<style>				
@@ -157,7 +157,7 @@ if(isset($_POST["button"]))
 				$result = pg_query($query) or die(pg_last_error());
 				while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 				{
-					echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px; border: 1px solid black;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+					echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 				}
 			?>	
 		</table>
