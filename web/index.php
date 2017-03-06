@@ -121,6 +121,7 @@ if(isset($_POST["button"]))
 				padding: 5px;
 				//margin-top: 3px;
 				//margin-right: 3px;
+				border-bottom: 1px solid white;
 			}
 			
 			input[type = "submit"]
@@ -128,7 +129,7 @@ if(isset($_POST["button"]))
 				border: 0px;
 				border-top: 1px solid black;
 				border-right: 1px solid black;
-				border-bottom: 1px solid black;
+				
 				color: #fff; /* цвет текста */
 				cursor: pointer;
 			    text-decoration: none; /* убирать подчёркивание у ссылок */
@@ -150,7 +151,7 @@ if(isset($_POST["button"]))
 	<body>
 		<div class = "container">
 		
-		<h1 style = "margin-top: 20px;">ПКсп-114</h1>
+		<h1 style = "margin-top: 20px;">СПКсп-114</h1>
 			
 		<form method="post" style = "text-align: left; margin: 0px;">
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%; border-left: 1px solid white;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
