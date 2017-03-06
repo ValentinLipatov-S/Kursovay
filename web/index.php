@@ -31,7 +31,7 @@ if($_GET["comand"] == "create")
 if($_GET["comand"] == "delete")
 {
 	$query = "DELETE FROM data";
-	$result = pg_query($query) or die(pg_last_error());
+	$result = pg_query($query) or die(pg_last_error());	
 }
 if($_GET["comand"] == "write")
 {
@@ -71,6 +71,7 @@ if($_GET["comand"] == "write")
 			case 30:{ $text = "Программный модуль «Картотека для учета литературы в библиотеке»."; } break;
 		}
 		$query = "INSERT INTO data (id, name, text) VALUES ('$i', '', '$text')";
+		$result = pg_query($query) or die(pg_last_error());
 	}
 }	
 if(isset($_POST["button"]))	
