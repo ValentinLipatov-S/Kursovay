@@ -10,7 +10,7 @@ if($_GET["comand"] == "delete" and isset($_GET["number"]))
 {
 	$query = "UPDATE data SET name = '' WHERE id = '$_GET[number]'";
 	$result = pg_query($query) or die(pg_last_error());
-	echo "<script>alert('Удалено');</script>";
+	
 }
 if($_GET["comand"] == "create")
 {
@@ -21,11 +21,11 @@ if($_GET["comand"] == "create")
 		name TEXT NOT NULL,
 		text TEXT NOT NULL)";
 		$result = pg_query($query) or die(pg_last_error());
-		echo "<script>alert('База данных создана');</script>";
+		
 	}
 	catch (Exception $e) 
 	{
-		echo "<script>alert('Ошибка создания базы данных');</script>";
+		
 	}
 }
 if($_GET["comand"] == "delete")
@@ -82,13 +82,7 @@ if(isset($_POST["button"]))
 	{
 		$query = "UPDATE data SET name = '$_POST[text_name]' WHERE id = '$_POST[text_number]'";
 		$result = pg_query($query) or die(pg_last_error());
-		echo "<script>alert('Забронировано');</script>";
 	}	
-	else
-	{
-		echo "<script>alert('Ошибка');</script>";
-	}
-	$result = pg_query($query) or die(pg_last_error());
 }
 ?>
 <html>
