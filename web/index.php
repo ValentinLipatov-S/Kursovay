@@ -150,7 +150,11 @@ if(isset($_POST["button"]))
 		<div class = "container">
 		
 		<h1 style = "margin-top: 20px;">ПКсп-114</h1>
-		<table>
+			
+		<form method="post" style = "text-align: left;">
+			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%; border-top: 1px solid white;" /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%; border-left: 1px solid white;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
+		</form>
+			<table>
 			<tr style = "font-size: 14px;">
 				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
 			</tr>
@@ -163,10 +167,7 @@ if(isset($_POST["button"]))
 				}
 			?>	
 		</table>
-		
-		<form method="post" style = "text-align: left;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%; border-top: 1px solid white;" /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%; border-left: 1px solid white;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
-		</form>
+
 		</div>
 	</body>
 </html>
