@@ -126,6 +126,8 @@ if(isset($_POST["button"]))
 			input[type = "submit"]
 			{
 				border: 0px;
+				border-right: 1px solid black;
+				border-bottom: 1px solid black;
 				color: #fff; /* цвет текста */
 				cursor: pointer;
 			    text-decoration: none; /* убирать подчёркивание у ссылок */
@@ -163,7 +165,7 @@ if(isset($_POST["button"]))
 		</table>
 		
 		<form method="post" style = "text-align: left;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%;" /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
+			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%; border-top: 1px solid white;" /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%; border-left: 1px solid white;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
 		</form>
 		</div>
 	</body>
