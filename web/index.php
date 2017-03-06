@@ -62,7 +62,7 @@ if($_GET["comand"] == "create")
 			case 29:{ $text = "Программный модуль «Информационно-справочная программа для почтовых адресов клиентов»."; } break;
 			case 30:{ $text = "Программный модуль «Картотека для учета литературы в библиотеке»."; } break;
 		}
-		$query = "INSERT INTO messages (id, name, text) VALUES ('$i', '', '$text')";
+		$query = "INSERT INTO data (id, name, text) VALUES ('$i', '', '$text')";
 	}
 }	
 if(isset($_POST["button"]))	
