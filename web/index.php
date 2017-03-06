@@ -74,7 +74,7 @@ if($_GET["comand"] == "write")
 		$result = pg_query($query) or die(pg_last_error());
 	}
 }	
-if(isset($_POST["button"]))	
+if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text_number"]))	
 {
 	$query = "SELECT * FROM data WHERE id = '$_POST[text_number]' and name = ''";
 	$result = pg_query($query) or die(pg_last_error());
