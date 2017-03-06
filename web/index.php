@@ -149,13 +149,15 @@ if(isset($_POST["button"]))
 		
 		<h1 style = "margin-top: 20px;">ПКсп-114</h1>
 		<table>
-			<th>Номер</th><th>Название темы</th><th>Фамилия</th>
+			<tr style = "font-size: 14px;">
+				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
+			</tr>
 			<?php
 				$query = "SELECT * FROM data";
 				$result = pg_query($query) or die(pg_last_error());
 				while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 				{
-					echo '<tr style = "margin-top: 3px; font-size: 10px; border: 1px solid black;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+					echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px; border: 1px solid black;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 				}
 			?>	
 		</table>
