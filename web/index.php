@@ -33,7 +33,9 @@ if($_GET["comand"] == "delete")
 	$query = "DELETE FROM data";
 	$result = pg_query($query) or die(pg_last_error());	
 }
-if($_GET["comand"] == "write")
+$query = "SELECT * FROM data";
+$result = pg_query($query) or die(pg_last_error());
+if(pg_num_rows($result) == 0)
 {
 	for($i = 1; $i <= 30; $i++)
 	{
