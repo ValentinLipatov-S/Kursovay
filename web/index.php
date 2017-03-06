@@ -139,7 +139,7 @@ if(isset($_POST["button"]))
 			.container
 			{
 				margin: 0px auto;
-				width: 60%;
+				width: 80%;
 			}
 		</style>
 	</head>
