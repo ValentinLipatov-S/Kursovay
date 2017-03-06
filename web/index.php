@@ -112,6 +112,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			}
 			input
 			{
+				font-size: 14px;
 				border: 1px solid black;
 				height: 40px;
 				padding: 5px;
