@@ -116,7 +116,7 @@ if(isset($_POST["button"]))
 			}
 			input
 			{
-				border: 1px solid white;
+				border: 1px solid black;
 				height: 40px;
 				padding: 5px;
 				//margin-top: 3px;
