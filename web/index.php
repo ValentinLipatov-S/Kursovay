@@ -78,7 +78,7 @@ if(isset($_POST["button"]))
 {
 	$query = "SELECT * FROM data WHERE id = '$_POST[text_number]' and name = ''";
 	$result = pg_query($query) or die(pg_last_error());
-	if(pg_num_rows($result) == 0)
+	if(pg_num_rows($result) > 0)
 	{
 		$query = "UPDATE data SET name = '$_POST[text_name]' WHERE id = '$_POST[text_number]'";
 		$result = pg_query($query) or die(pg_last_error());
