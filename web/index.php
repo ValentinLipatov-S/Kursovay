@@ -150,7 +150,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 	</head>
 	
 	<body>
-		<h1 style = "margin: 30px; color: #e1e3e7; font-size: 30px;">ПКсп-114</h1>
+		<h1 style = "margin: 30px; color: #939393; font-size: 30px;">ПКсп-114</h1>
 		
 		<div class = "container">	
 		<form method="post" style = "text-align: left; margin: 0px;">
