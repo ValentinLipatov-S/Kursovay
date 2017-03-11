@@ -63,15 +63,13 @@ if(isset($_POST["button_autorizate"]) and isset($_POST["login"]) and isset($_POS
 	if(pg_num_rows($result) > 0)
 	{
 		$_SESSION['Autorizate'] = 1;
-		echo "<script>alert(" . $_SESSION['Autorizate'] . ")</script>";
 	}
 }
 
-if($_GET["comand"] == "delete" and isset($_GET["number"]))
+if(isset($_POST["button_delete"]) and isset($_POST["namber"]))
 {
-	$query = "UPDATE data SET name = '' WHERE id = '$_GET[number]'";
+	$query = "UPDATE data SET name = '' WHERE id = '$_POST[namber]'";
 	$result = pg_query($query) or die(pg_last_error());
-	
 }
 
 if($_GET["comand"] == "delete_all")
@@ -79,6 +77,7 @@ if($_GET["comand"] == "delete_all")
 	$query = "DELETE FROM data";
 	$result = pg_query($query) or die(pg_last_error());	
 }
+
 $query = "SELECT * FROM data";
 $result = pg_query($query) or die(pg_last_error());
 if(pg_num_rows($result) == 0)
@@ -212,6 +211,14 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px; margin-bottom: 0px;" />
 		</form>
+		
+		<?php if($_SESSION['Autorizate'] == 1)
+			echo
+			'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
+				.'<input type = "text" name = "namber"  placeholder = "Номер темы" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Удалить" name = "button_delete" style = "width: 192px; margin-bottom: 0px;" />'
+			.'</form>'
+		?>
+			
 			
 			<table style = "width: 1000px;">
 			<tr style = "background: #f5f8fa;">
