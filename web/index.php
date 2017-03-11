@@ -117,12 +117,12 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			}
 			input
 			{
-				border: 1px solid black;
+				
 				height: 40px;
 				padding: 5px;
 				//margin-top: 3px;
 				//margin-right: 3px;
-				border-bottom: 1px solid white;
+				
 			}
 			
 			input[type = "submit"]
@@ -152,7 +152,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<h1 style = "margin-top: 20px;">ПКсп-114</h1>
 			
 		<form method="post" style = "text-align: left; margin: 0px;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%; border-left: 1px solid white;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
+			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 20%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 50%; " /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
 		</form>
 			<table>
 			<tr style = "font-size: 14px; background: #f0f2f5;">
