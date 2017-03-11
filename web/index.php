@@ -97,8 +97,8 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<title>Задания на курсовую работу</title>
 		<link rel="SHORTCUT ICON" href="icon.ico" type="image/x-icon">
 		<style type="text/css">
-			TABLE { width: 100%;  border: 1px solid #e1e3e7; /* Ширина таблицы */ /* Рамка вокруг таблицы */}
-			TD, TH {padding: 5px;  border: 1px solid #e1e3e7;   /* Поля вокруг содержимого ячеек */}
+			TABLE { width: 100%;  border: 1px solid #e1e3e7; }
+			TD, TH {padding: 5px;  border: 1px solid #e1e3e7;  }
 			TH { height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #f0f2f5; font-weight: normal;}
 		</style>
 		<style>				
@@ -114,7 +114,6 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				  color: #3b3b3b;
 				  -webkit-font-smoothing: antialiased;
 				  font-smoothing: antialiased;
-				  background: white; //#2b2b2b;
 			}
 			input
 			{
