@@ -129,7 +129,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			
 			input[type = "submit"]
 			{
-				
+				transition: 1s; 
 				font-size: 13px;
 				border: 1px solid #e1e3e7;
 				color: #939393; /* цвет текста */
@@ -140,8 +140,8 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				padding: .7em 1.5em; /* отступ от текста */
 				outline: none; /* убирать контур в Mozilla */
 			} 
-			input[type = "submit"]:hover { background: #ffffff; } /* при наведении курсора мышки */
-			input[type = "submit"]:active { background: #f5f8fa; } /* при нажатии */
+			input[type = "submit"]:hover { transition: 1s; background: #ffffff; } /* при наведении курсора мышки */
+			input[type = "submit"]:active { transition: 1s; background: #f5f8fa; } /* при нажатии */
 			
 			.container
 			{	
