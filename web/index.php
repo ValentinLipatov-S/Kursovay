@@ -190,7 +190,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		</div>
 		</div>
 		<p style = "margin: 10px; color: #939393; font-size: 12px;">&copy;&nbsp;VLSU&nbsp;Valentin&nbsp;Lipatov,&nbsp;2017</p>
-	</body>
+	</body> 
 </html>
 <?php 
 pg_free_result($result);
