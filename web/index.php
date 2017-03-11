@@ -123,6 +123,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				padding: 5px;
 				
 				margin: 2px;
+				margin-bottom: 0px;
 				//margin-right: 3px;
 				
 			}
