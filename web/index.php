@@ -17,7 +17,7 @@ if($_GET["comand"] == "create_database_data")
 		name TEXT NOT NULL,
 		text TEXT NOT NULL)";
 		$result = pg_query($query) or die(pg_last_error());
-		
+		header("Location: index.php");
 	}
 	catch (Exception $e) 
 	{
@@ -33,6 +33,7 @@ if($_GET["comand"] == "create_database_users")
 		login TEXT NOT NULL,
 		password TEXT NOT NULL)";
 		$result = pg_query($query) or die(pg_last_error());
+		header("Location: index.php");
 	}
 	catch (Exception $e) 
 	{
@@ -44,6 +45,7 @@ if($_GET["comand"] == "delete" and isset($_GET["login"]))
 {
 	$query = "DELETE FROM users WHERE login = '$_GET[login]'";
 	$result = pg_query($query) or die(pg_last_error());	
+	header("Location: index.php");
 }
 
 if($_GET["comand"] == "add" and isset($_GET["login"]) and isset($_GET["password"]))
@@ -52,6 +54,7 @@ if($_GET["comand"] == "add" and isset($_GET["login"]) and isset($_GET["password"
 	$password = $_GET["password"];
 	$query = "INSERT INTO users (login, password) VALUES ('$login', '$password')";
 	$result = pg_query($query) or die(pg_last_error());
+	header("Location: index.php");
 }
 
 if(isset($_POST["button_autorizate"]) and isset($_POST["login"]) and isset($_POST["password"]))
@@ -64,23 +67,27 @@ if(isset($_POST["button_autorizate"]) and isset($_POST["login"]) and isset($_POS
 	{
 		$_SESSION['Autorizate'] = 1;
 	}
+	header("Location: index.php");
 }
 
 if(isset($_POST["button_exit"]))
 {
 	$_SESSION['Autorizate'] = 0;
+	header("Location: index.php");
 }
 
 if(isset($_POST["button_delete"]) and isset($_POST["namber"]))
 {
 	$query = "UPDATE data SET name = '' WHERE id = '$_POST[namber]'";
 	$result = pg_query($query) or die(pg_last_error());
+	header("Location: index.php");
 }
 
 if($_GET["comand"] == "delete_all")
 {
 	$query = "DELETE FROM data";
 	$result = pg_query($query) or die(pg_last_error());	
+	header("Location: index.php");
 }
 
 $query = "SELECT * FROM data";
@@ -140,6 +147,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			$result = pg_query($query) or die(pg_last_error());
 		}
 	}	
+	header("Location: index.php");
 }
 ?>
 <html>
