@@ -104,7 +104,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<style>				
 			body
 			{
-				background: #f5f8fa;
+				background: #fff;
 				margin: 5px;
 				text-align: center;
 				     font-family: Arial, Helvetica, sans-serif;
@@ -118,11 +118,12 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			input
 			{
 				background: #ffffff;
-				border: 0px;
+				border: 1px solid #e1e3e7;
 				height: 40px;
 				padding: 5px;
-				margin: 1px;
-				//margin-top: 3px;
+				
+				margin-top: 3px;
+				margin-bottom: 3px;
 				//margin-right: 3px;
 				
 			}
