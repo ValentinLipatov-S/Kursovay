@@ -215,7 +215,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<?php if($_SESSION['Autorizate'] == 1)
 			echo
 			'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
-				.'<input type = "text" name = "namber"  placeholder = "Номер темы" style = "width: 800px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Удалить" name = "button_delete" style = "width: 192px; margin-bottom: 0px;" />'
+				.'<input type = "text" name = "namber"  placeholder = "Номер темы" style = "width: 802px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Удалить" name = "button_delete" style = "width: 192px; margin-bottom: 0px;" />'
 			.'</form>';
 		?>
 			
