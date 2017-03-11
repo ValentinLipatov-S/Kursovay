@@ -142,11 +142,12 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			} 
 			input[type = "submit"]:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
 			input[type = "submit"]:active { background: rgb(152,15,0); } /* при нажатии */
+			
 			.container
 			{
 				border: 1px solid #e1e3e7;
 				margin: 0px auto;
-				width: 80%;
+				
 			}
 		</style>
 	</head>
@@ -158,7 +159,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<form method="post" style = "text-align: left; margin: 0px;">
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 20%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 50%; " /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
 		</form>
-			<table>
+			<table style = "width: 80%;">
 			<tr style = "font-size: 14px; background: #f5f8fa;">
 				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
 			</tr>
