@@ -237,15 +237,15 @@ if(isset($_POST["button_change"]) and isset($_POST["change_text_number"]) and is
 			echo
 			
 			'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
+				.'<input type = "text" name = "change_text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "change_text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Изменить" name = "button_change" style = "width: 192px; margin-bottom: 0px;" />'
+			.'</form>'
+			
+			.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
 				.'<input type = "text" name = "namber"  placeholder = "Номер темы" style = "width: 802px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Удалить" name = "button_delete" style = "width: 192px; margin-bottom: 0px;" />'
 			.'</form>'
 			
 			.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
 				.'<input type = "submit" value = "Выйти" name = "button_exit" style = "width: 996px; margin-bottom: 0px;" />'
-			.'</form>'
-			
-			.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
-				.'<input type = "text" name = "change_text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "change_text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Изменить" name = "button_change" style = "width: 192px; margin-bottom: 0px;" />'
 			.'</form>';
 		?>
 			
