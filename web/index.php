@@ -122,8 +122,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				height: 40px;
 				padding: 5px;
 				
-				margin-top: 3px;
-				margin-bottom: 3px;
+				margin: 2px;
 				//margin-right: 3px;
 				
 			}
