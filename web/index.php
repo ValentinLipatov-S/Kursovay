@@ -98,8 +98,8 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<link rel="SHORTCUT ICON" href="icon.ico" type="image/x-icon">
 		<style type="text/css">
 			TABLE { width: 100%;  border: 1px solid #e1e3e7; }
-			TD, TH {padding: 5px;  border: 1px solid #e1e3e7;  }
-			TH { height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #f5f8fa;; font-weight: normal;}
+			TD, TH { padding: 5px;  border: 1px solid #e1e3e7; }
+			TH { height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #ffffff; font-weight: normal;}
 		</style>
 		<style>				
 			body
@@ -128,7 +128,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			
 			input[type = "submit"]
 			{
-				font-size: 14px;
+				font-size: 13px;
 				border: 0px;
 				color: #fff; /* цвет текста */
 				cursor: pointer;
