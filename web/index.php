@@ -157,7 +157,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 20%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 50%; " /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
 		</form>
 			<table>
-			<tr style = "font-size: 14px; background: #f0f2f5;">
+			<tr style = "font-size: 14px; background: #f5f8fa;">
 				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
 			</tr>
 			<?php
