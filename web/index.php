@@ -99,7 +99,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<style type="text/css">
 			TABLE { width: 100%;  border: 1px solid #e1e3e7; }
 			TD, TH {padding: 5px;  border: 1px solid #e1e3e7;  }
-			TH { height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #f0f2f5; font-weight: normal;}
+			TH { height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #f5f8fa;; font-weight: normal;}
 		</style>
 		<style>				
 			body
