@@ -155,7 +155,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 25%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 45%; border-left: 1px solid white;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
 		</form>
 			<table>
-			<tr style = "font-size: 14px;">
+			<tr style = "font-size: 14px; background: #f0f2f5;">
 				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
 			</tr>
 			<?php
@@ -165,7 +165,10 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 					$result = pg_query($query) or die(pg_last_error());
 					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 					{
-						echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+						if($line["name"] == "")
+							echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+						else 
+							echo '<tr style = "background: #f0f2f5; margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 					}
 				}	
 			?>	
