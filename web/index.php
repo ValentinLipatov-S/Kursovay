@@ -234,7 +234,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		</table>
 		
 		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
-			<input type = "text" name = "login" placeholder = "Логин" style = "width: 150px; margin-right: 0px; margin-top: 0px;" /><input type = "password" name = "password"  placeholder = "Пароль" style = "width: 650px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Забронировать" name = "button_autorizate" style = "width: 192px; margin-top: 0px;" />
+			<input type = "text" name = "login" placeholder = "Логин" style = "width: 400px; margin-right: 0px; margin-top: 0px;" /><input type = "password" name = "password"  placeholder = "Пароль" style = "width: 400px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Авторизоваться" name = "button_autorizate" style = "width: 192px; margin-top: 0px;" />
 		</form>
 		
 		</div>
