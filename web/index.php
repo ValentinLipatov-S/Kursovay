@@ -54,7 +54,7 @@ if($_GET["comand"] == "add" and isset($_GET["login"]) and isset($_GET["password"
 	$result = pg_query($query) or die(pg_last_error());
 }
 
-if($_POST["comand"] == "autorizate" and isset($_POST["login"]) and isset($_POST["password"]))
+if(isset($_POST["button_autorizate"]) and isset($_POST["login"]) and isset($_POST["password"]))
 {
 	$login = $_POST["login"];
 	$password = $_POST["password"];
@@ -63,6 +63,7 @@ if($_POST["comand"] == "autorizate" and isset($_POST["login"]) and isset($_POST[
 	if(pg_num_rows($result) > 0)
 	{
 		$_SESSION['Autorizate'] = 1;
+		echo "<script>alert(" . $_SESSION['Autorizate'] . ")</script>";
 	}
 }
 
@@ -233,7 +234,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		</table>
 		
 		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 150px; margin-right: 0px; margin-top: 0px;" /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px; margin-top: 0px;" />
+			<input type = "text" name = "login" placeholder = "Логин" style = "width: 150px; margin-right: 0px; margin-top: 0px;" /><input type = "password" name = "password"  placeholder = "Пароль" style = "width: 650px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Забронировать" name = "button_autorizate" style = "width: 192px; margin-top: 0px;" />
 		</form>
 		
 		</div>
