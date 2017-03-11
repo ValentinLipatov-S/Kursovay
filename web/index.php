@@ -162,10 +162,12 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		
 		<div class = "container">
 		<div class = "pop">	
-		<form method="post" style = "text-align: left; margin: 0px;">
+			
+		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 20%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 50%; " /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
 		</form>
-			<table style = "width: 80%;">
+			
+			<table style = "width: 1000px;">
 			<tr style = "font-size: 14px; background: #f5f8fa;">
 				<th>Номер</th><th>Название темы</th><th>Фамилия</th>
 			</tr>
