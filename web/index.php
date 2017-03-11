@@ -121,6 +121,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				border: 0px;
 				height: 40px;
 				padding: 5px;
+				margin: 1px;
 				//margin-top: 3px;
 				//margin-right: 3px;
 				
@@ -128,6 +129,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			
 			input[type = "submit"]
 			{
+				
 				font-size: 13px;
 				border: 0px;
 				color: #fff; /* цвет текста */
