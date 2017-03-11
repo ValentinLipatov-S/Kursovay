@@ -137,12 +137,12 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				cursor: pointer;
 			   	text-decoration: none; /* убирать подчёркивание у ссылок */
 				user-select: none; /* убирать выделение текста */
-				background: #edeef0; /* фон кнопки */
+				background: #f5f8fa; /* фон кнопки */
 				padding: .7em 1.5em; /* отступ от текста */
 				outline: none; /* убирать контур в Mozilla */
 			} 
-			input[type = "submit"]:hover { background: #f5f8fa; } /* при наведении курсора мышки */
-			input[type = "submit"]:active { background: #edeef0; } /* при нажатии */
+			input[type = "submit"]:hover { background: #ffffff; } /* при наведении курсора мышки */
+			input[type = "submit"]:active { background: #f5f8fa; } /* при нажатии */
 			
 			.container
 			{	
@@ -169,7 +169,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		</form>
 			
 			<table style = "width: 1000px;">
-			<tr style = "font-size: 14px; background: #f5f8fa;">
+			<tr style = "background: #f5f8fa;">
 				<th style = "color: #939393;">Номер</th><th style = "color: #939393;">Название темы</th><th style = "color: #939393;">Фамилия</th>
 			</tr>
 			<?php
