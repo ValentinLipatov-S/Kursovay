@@ -150,6 +150,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			}
 			.pop
 			{
+				display: inline-block;
 				border: 1px solid #e1e3e7;
 				margin: 0px auto;			
 			}
