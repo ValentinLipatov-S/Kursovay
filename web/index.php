@@ -264,7 +264,7 @@ if(isset($_POST["button_change"]) and isset($_POST["change_text_number"]) and is
 						if($line["name"] == "")
 							echo '<tr style = "background: #ffffff; margin-bottom: 3px; margin-top: 3px;"><td>&emsp;&nbsp;' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 						else 
-							echo '<tr style = "background: #f5f8fa; margin-bottom: 3px; margin-top: 3px;"><td><img src = "1.png" />&nbsp;' . $line["id"] . '</td><td style = "color: #bbbbbb;">' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+							echo '<tr style = "background: #f5f8fa; margin-bottom: 3px; margin-top: 3px;"><td><img src = "1.png" style = "margin-bottom: -3px;" />&nbsp;' . $line["id"] . '</td><td style = "color: #bbbbbb;">' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 					}
 				}	
 			?>	
