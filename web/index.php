@@ -144,10 +144,14 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			input[type = "submit"]:active { background: rgb(152,15,0); } /* при нажатии */
 			
 			.container
+			{	
+				margin: 0px auto;
+				width: 100%;
+			}
+			.pop
 			{
 				border: 1px solid #e1e3e7;
-				margin: 0px auto;
-				
+				margin: 0px auto;			
 			}
 		</style>
 	</head>
@@ -155,7 +159,8 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 	<body>
 		<h1 style = "margin: 30px; color: #939393; font-size: 30px;">ПКсп-114</h1>
 		
-		<div class = "container">	
+		<div class = "container">
+		<div class = "pop">	
 		<form method="post" style = "text-align: left; margin: 0px;">
 			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 20%; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 50%; " /><input type = "submit" value = "Забронировать" name = "button" style = "width: 30%;" />
 		</form>
@@ -178,7 +183,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				}	
 			?>	
 		</table>
-
+		</div>
 		</div>
 	</body>
 </html>
