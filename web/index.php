@@ -132,7 +132,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			{
 				
 				font-size: 13px;
-				border: 0px;
+				border: 1px solid #e1e3e7;
 				color: #939393; /* цвет текста */
 				cursor: pointer;
 			   	text-decoration: none; /* убирать подчёркивание у ссылок */
@@ -180,9 +180,9 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 					{
 						if($line["name"] == "")
-							echo '<tr style = "background: #ffffff; margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+							echo '<tr style = "background: #ffffff; margin-bottom: 3px; margin-top: 3px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 						else 
-							echo '<tr style = "background: #f5f8fa; margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+							echo '<tr style = "background: #f5f8fa; margin-bottom: 3px; margin-top: 3px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 					}
 				}	
 			?>	
