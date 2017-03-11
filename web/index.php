@@ -149,6 +149,14 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 	}	
 	header("Location: index.php");
 }
+
+if(isset($_POST["button_change"]) and isset($_POST["change_text_number"]) and isset($_POST["change_text_name"]))
+{
+	$query = "UPDATE data SET name = '$_POST[change_text_name]' WHERE id = '$_POST[change_text_number]'";
+	$result = pg_query($query) or die(pg_last_error());
+	header("Location: index.php");
+}
+
 ?>
 <html>
 	<head>
@@ -234,6 +242,10 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			
 			.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
 				.'<input type = "submit" value = "Выйти" name = "button_exit" style = "width: 996px; margin-bottom: 0px;" />'
+			.'</form>'
+			
+			.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
+				.'<input type = "text" name = "change_text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "change_text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Изменить" name = "button_change" style = "width: 192px; margin-bottom: 0px;" />'
 			.'</form>';
 		?>
 			
