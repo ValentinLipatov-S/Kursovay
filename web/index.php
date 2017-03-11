@@ -158,7 +158,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 	</head>
 	
 	<body>
-		<p style = "margin: 30px; color: #939393; font-size: 30px;">ПКсп-114</p>
+		<p style = "margin: 30px; color: #bbb; font-size: 30px;">ПКсп-114</p>
 		
 		<div class = "container">
 		<div class = "pop">	
