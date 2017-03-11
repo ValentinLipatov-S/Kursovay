@@ -99,7 +99,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<style type="text/css">
 			TABLE {width: 100%;  border: 1px solid #e1e3e7; /* Ширина таблицы */ /* Рамка вокруг таблицы */}
 			TD, TH {padding: 5px;  border: 1px solid #e1e3e7;   /* Поля вокруг содержимого ячеек */}
-			TH { height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #f0f2f5; font-weight: normal;}
+			TH { border-radius: 3px; height: 40px; padding: 5px; color: #2b2b2b; text-align: left; background: #f0f2f5; font-weight: normal;}
 		</style>
 		<style>				
 			body
@@ -117,7 +117,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			}
 			input
 			{
-				
+				border: 1px solid #e7e8ec;
 				height: 40px;
 				padding: 5px;
 				//margin-top: 3px;
