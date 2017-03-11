@@ -188,7 +188,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		</table>
 		</div>
 		</div>
-		<p style = "margin: 10px; color: #939393; font-size: 12px;">&copy;&nbsp;Valentin&nbsp;Lipatov,&nbsp;2017</p>
+		<p style = "margin: 10px; color: #939393; font-size: 12px;">&copy;&nbsp;Valentin&nbsp;Lipatov&nbsp;2017</p>
 	</body> 
 </html>
 <?php 
