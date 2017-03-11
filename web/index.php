@@ -168,7 +168,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				padding: 6px;
 				
 				margin: 2px;
-				margin-bottom: 0px;
+				
 				//margin-right: 3px;	
 			}
 			
@@ -209,7 +209,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<div class = "pop">	
 			
 		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px;" />
+			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px; margin-bottom: 0px;" />
 		</form>
 			
 			<table style = "width: 1000px;">
@@ -233,7 +233,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		</table>
 		
 		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px;" />
+			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 150px; margin-right: 0px; margin-top: 0px;" /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px; margin-top: 0px;" />
 		</form>
 		
 		</div>
