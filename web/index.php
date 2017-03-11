@@ -165,7 +165,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 		<div class = "pop">	
 			
 		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 200px;" />
+			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px;" />
 		</form>
 			
 			<table style = "width: 1000px;">
