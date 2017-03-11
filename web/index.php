@@ -1,4 +1,5 @@
 <?php
+session_start();
 $dbconn = pg_connect("
 	host     = ec2-54-217-235-11.eu-west-1.compute.amazonaws.com
 	dbname   = d44a3esdip8873
@@ -6,13 +7,8 @@ $dbconn = pg_connect("
 	password = ae39d71a4b0eec6e94c28f1cd533f6a42da4e6f2133e6b8c0b8abff04d3f2f8f
 ")or die('Could not connect: ' . pg_last_error());
 
-if($_GET["comand"] == "delete" and isset($_GET["number"]))
-{
-	$query = "UPDATE data SET name = '' WHERE id = '$_GET[number]'";
-	$result = pg_query($query) or die(pg_last_error());
-	
-}
-if($_GET["comand"] == "create")
+
+if($_GET["comand"] == "create_database_data")
 {
 	try 
 	{  
@@ -28,6 +24,55 @@ if($_GET["comand"] == "create")
 		
 	}
 }
+
+if($_GET["comand"] == "create_database_users")
+{
+	try 
+	{  
+		$query = "CREATE TABLE users (
+		login TEXT NOT NULL,
+		password TEXT NOT NULL)";
+		$result = pg_query($query) or die(pg_last_error());
+	}
+	catch (Exception $e) 
+	{
+		
+	}
+}
+
+if($_GET["comand"] == "delete" and isset($_GET["login"]))
+{
+	$query = "DELETE FROM users WHERE login = '$_GET[login]'";
+	$result = pg_query($query) or die(pg_last_error());	
+}
+
+if($_GET["comand"] == "add" and isset($_GET["login"]) and isset($_GET["password"]))
+{
+	$login = $_GET["login"];
+	$password = $_GET["password"];
+	$query = "INSERT INTO users (login, password) VALUES ('$login', '$password')";
+	$result = pg_query($query) or die(pg_last_error());
+}
+
+if($_POST["comand"] == "autorizate" and isset($_POST["login"]) and isset($_POST["password"]))
+{
+	$login = $_POST["login"];
+	$password = $_POST["password"];
+	$query = "SELECT FROM users WHERE login = '$login' and password = '$password'";
+	$result = pg_query($query) or die(pg_last_error());	
+	if(pg_num_rows($result) > 0)
+	{
+		$_SESSION['Autorizate'] = 1;
+	}
+}
+
+if($_GET["comand"] == "delete" and isset($_GET["number"]))
+{
+	$query = "UPDATE data SET name = '' WHERE id = '$_GET[number]'";
+	$result = pg_query($query) or die(pg_last_error());
+	
+}
+
 if($_GET["comand"] == "delete_all")
 {
 	$query = "DELETE FROM data";
@@ -186,8 +231,14 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 				}	
 			?>	
 		</table>
+		
+		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
+			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px;" />
+		</form>
+		
 		</div>
 		</div>
+		
 		<p style = "margin: 12px; color: #939393; font-size: 12px;">&copy;&nbsp;Valentin&nbsp;Lipatov,&nbsp;2017</p>
 	</body> 
 </html>
