@@ -117,7 +117,7 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 			}
 			input
 			{
-				border: 1px solid #e7e8ec;
+				border: 0px;
 				height: 40px;
 				padding: 5px;
 				//margin-top: 3px;
@@ -166,9 +166,9 @@ if(isset($_POST["button"]) and isset($_POST["text_name"]) and isset($_POST["text
 					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
 					{
 						if($line["name"] == "")
-							echo '<tr style = "border: 3px solid black; margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+							echo '<tr style = "margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 						else 
-							echo '<tr style = "border: 3px solid black; background: #f0f2f5; margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+							echo '<tr style = "background: #f0f2f5; margin-bottom: 3px; margin-top: 3px; font-size: 14px;"><td>' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
 					}
 				}	
 			?>	
