@@ -230,7 +230,7 @@ if(isset($_POST["button_change"]) and isset($_POST["change_text_number"]) and is
 				<?php if($_SESSION['Autorizate'] != 1)
 				echo
 					'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
-						.'<input type = "text" name = "login" placeholder = "Логин" style = "width: 400px; margin-right: 0px; margin-top: 0px;" /><input type = "password" name = "password"  placeholder = "Пароль" style = "width: 400px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Авторизоваться" name = "button_autorizate" style = "width: 192px; margin-top: 0px;" />'
+						.'<input type = "text" name = "login" placeholder = "Логин" style = "width: 400px; margin-right: 0px; margin-top: 2px;" /><input type = "password" name = "password"  placeholder = "Пароль" style = "width: 400px;  margin-right: 0px; margin-top: 2px;" /><input type = "submit" value = "Авторизоваться" name = "button_autorizate" style = "width: 192px; margin-top: 2px;" />'
 					.'</form>';
 				?>
 
