@@ -224,61 +224,61 @@ if(isset($_POST["button_change"]) and isset($_POST["change_text_number"]) and is
 	</head>
 	
 	<body>
-		<p style = "margin: 0px auto; color: #777; font-size: 26px; background: #ffffff; padding: 20px; width: 960px; border: 1px solid #e1e3e7; border-bottom: 0px;">Темы курсовых работ студентов группы ПКсп-114</p>
-		
 		<div class = "container">
-		<div class = "pop">	
+			<div class = "pop">	
+
+				<?php if($_SESSION['Autorizate'] != 1)
+				echo
+					'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
+						.'<input type = "text" name = "login" placeholder = "Логин" style = "width: 400px; margin-right: 0px; margin-top: 0px;" /><input type = "password" name = "password"  placeholder = "Пароль" style = "width: 400px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Авторизоваться" name = "button_autorizate" style = "width: 192px; margin-top: 0px;" />'
+					.'</form>';
+				?>
+
+				<p style = "margin: 0px auto; color: #777; font-size: 26px; background: #ffffff; padding: 20px; width: 960px; ">Темы курсовых работ студентов группы ПКсп-114</p>
+
+				
+				<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
+					<input type = "text" name = "text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px; margin-bottom: 0px;" />
+				</form>
+
+				<?php if($_SESSION['Autorizate'] == 1)
+					echo
+
+					'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
+						.'<input type = "text" name = "change_text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "change_text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Изменить" name = "button_change" style = "width: 192px; margin-bottom: 0px;" />'
+					.'</form>'
+
+					.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
+						.'<input type = "text" name = "namber"  placeholder = "Номер темы" style = "width: 802px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Удалить" name = "button_delete" style = "width: 192px; margin-bottom: 0px;" />'
+					.'</form>'
+
+					.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
+						.'<input type = "submit" value = "Выйти" name = "button_exit" style = "width: 996px; margin-bottom: 0px;" />'
+					.'</form>';
+				?>
 			
-		<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
-			<input type = "text" name = "text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Забронировать" name = "button" style = "width: 192px; margin-bottom: 0px;" />
-		</form>
-		
-		<?php if($_SESSION['Autorizate'] == 1)
-			echo
-			
-			'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
-				.'<input type = "text" name = "change_text_number" placeholder = "Номер темы" style = "margin-bottom: 0px; width: 150px; margin-right: 0px; " /><input type = "text" name = "change_text_name"  placeholder = "Фамилия" style = "width: 650px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Изменить" name = "button_change" style = "width: 192px; margin-bottom: 0px;" />'
-			.'</form>'
-			
-			.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
-				.'<input type = "text" name = "namber"  placeholder = "Номер темы" style = "width: 802px; margin-bottom: 0px;  margin-right: 0px;" /><input type = "submit" value = "Удалить" name = "button_delete" style = "width: 192px; margin-bottom: 0px;" />'
-			.'</form>'
-			
-			.'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
-				.'<input type = "submit" value = "Выйти" name = "button_exit" style = "width: 996px; margin-bottom: 0px;" />'
-			.'</form>';
-		?>
-			
-			
-			<table style = "width: 1000px;">
-			<tr style = "background: #f5f8fa;">
-				<th style = "color: #939393;">Номер</th><th style = "color: #939393;">Название темы</th><th style = "color: #939393;">Фамилия</th>
-			</tr>
-			<?php
-				for($i = 1; $i <= 30; $i++)
-				{
-					$query = "SELECT * FROM data WHERE id = '$i'";
-					$result = pg_query($query) or die(pg_last_error());
-					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
-					{
-						if($line["name"] == "")
-							echo '<tr style = "background: #ffffff; margin-bottom: 3px; margin-top: 3px;"><td>&emsp;&nbsp;' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
-						else 
-							echo '<tr style = "background: #f5f8fa; margin-bottom: 3px; margin-top: 3px;"><td><img src = "1.png" style = "margin-bottom: -3px;" />&nbsp;' . $line["id"] . '</td><td style = "color: #bbbbbb;">' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
-					}
-				}	
-			?>	
-		</table>
-		
-		<?php if($_SESSION['Autorizate'] != 1)
-		echo
-			'<form method="post" style = "text-align: left; margin: 0px; width: 100%;">'
-				.'<input type = "text" name = "login" placeholder = "Логин" style = "width: 400px; margin-right: 0px; margin-top: 0px;" /><input type = "password" name = "password"  placeholder = "Пароль" style = "width: 400px;  margin-right: 0px; margin-top: 0px;" /><input type = "submit" value = "Авторизоваться" name = "button_autorizate" style = "width: 192px; margin-top: 0px;" />'
-			.'</form>';
-		?>
+
+				<table style = "width: 1000px;">
+					<tr style = "background: #f5f8fa;">
+						<th style = "color: #939393;">Номер</th><th style = "color: #939393;">Название темы</th><th style = "color: #939393;">Фамилия</th>
+					</tr>
+					<?php
+						for($i = 1; $i <= 30; $i++)
+						{
+							$query = "SELECT * FROM data WHERE id = '$i'";
+							$result = pg_query($query) or die(pg_last_error());
+							while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) 
+							{
+								if($line["name"] == "")
+									echo '<tr style = "background: #ffffff; margin-bottom: 3px; margin-top: 3px;"><td>&emsp;&nbsp;' . $line["id"] . '</td><td>' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+								else 
+									echo '<tr style = "background: #f5f8fa; margin-bottom: 3px; margin-top: 3px;"><td><img src = "1.png" style = "margin-bottom: -3px;" />&nbsp;' . $line["id"] . '</td><td style = "color: #bbbbbb;">' . $line["text"] . '</td><td>' . $line["name"] . '</td></tr>';
+							}
+						}	
+					?>	
+				</table>
+			</div>
 		</div>
-		</div>
-		
 		<p style = "margin: 12px; color: #939393; font-size: 12px;">&copy;&nbsp;Valentin&nbsp;Lipatov,&nbsp;2017</p>
 	</body> 
 </html>
