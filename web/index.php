@@ -234,7 +234,7 @@ if(isset($_POST["button_change"]) and isset($_POST["change_text_number"]) and is
 					.'</form>';
 				?>
 
-				<p style = "margin: 0px auto; color: #777; font-size: 26px; background: #ffffff; padding: 20px; width: 960px; ">Темы курсовых работ студентов группы ПКсп-114</p>
+				<p style = "margin: 0px auto; color: #777; font-size: 30px; background: #ffffff; padding: 20px; width: 960px; padding-bottom: 35px; padding-top: 35px;">Темы курсовых работ студентов группы ПКсп-114</p>
 
 				
 				<form method="post" style = "text-align: left; margin: 0px; width: 100%;">
